@@ -1,0 +1,141 @@
+body {
+  background-color: white;
+  margin: 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+  background-color: white; }
+
+nav {
+  display: flex; }
+  nav a {
+    text-decoration: none; }
+  nav li {
+    list-style: none; }
+  nav button {
+    margin-right: 4vw;
+    width: 8vw;
+    border: none;
+    background: none; }
+
+nav.navbar-mobile {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center; }
+  nav.navbar-mobile button.navbar-closer {
+    position: absolute;
+    right: 0px;
+    color: #41006c; }
+    nav.navbar-mobile button.navbar-closer i {
+      font-size: 10vw; }
+  nav.navbar-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    nav.navbar-mobile ul .active {
+      color: #92d0fc; }
+    nav.navbar-mobile ul li a {
+      font-size: 10vw; }
+
+nav.navbar-desktop {
+  background-color: #41006c;
+  justify-content: space-between;
+  flex-direction: row; }
+  nav.navbar-desktop .navbar-brand, nav.navbar-desktop a {
+    color: white; }
+  nav.navbar-desktop .navbar-collapse {
+    flex-grow: 1; }
+    nav.navbar-desktop .navbar-collapse .navbar-nav {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      nav.navbar-desktop .navbar-collapse .navbar-nav .nav-link {
+        margin: 3vw;
+        color: white;
+        transition: 0.2s; }
+      nav.navbar-desktop .navbar-collapse .navbar-nav .nav-link:focus {
+        color: #92d0fc; }
+      nav.navbar-desktop .navbar-collapse .navbar-nav .nav-link:hover {
+        color: #92d0fc; }
+      nav.navbar-desktop .navbar-collapse .navbar-nav .active {
+        color: #92d0fc; }
+    @media screen and (max-width: 1025px) {
+      nav.navbar-desktop .navbar-collapse {
+        display: none; } }
+  nav.navbar-desktop button.navbar-toggler {
+    color: white;
+    font-size: 10vw; }
+    @media screen and (min-width: 1025px) {
+      nav.navbar-desktop button.navbar-toggler {
+        display: none; } }
+footer {
+  text-align: center; }
+
+#tagbox {
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(65, 0, 108, 0.7), rgba(0, 157, 224, 0.64));
+  background-size: cover;
+  background-image: linear-gradient(rgba(65, 0, 108, 0.7), rgba(0, 157, 224, 0.64)), url("/static/images/rohit-tandon-mountain-pic-mobile.jpg");
+  color: white;
+  height: 80vh; }
+  #tagbox h1 {
+    font-size: 10vw; }
+  #tagbox h2 {
+    font-size: 3vw;
+    text-align: left;
+    color: white; }
+  @media screen and (min-width: 1025px) {
+    #tagbox {
+      background-image: linear-gradient(rgba(65, 0, 108, 0.7), rgba(0, 157, 224, 0.64)), url("/static/images/rohit-tandon-mountain-pic-desktop.jpg"); }
+      #tagbox h1 {
+        font-size: 8vw; }
+      #tagbox h2 {
+        font-size: 3vw; } }
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw; }
+  section h2 {
+    font-size: 6vw;
+    text-align: center;
+    color: black; }
+  section .highlight {
+    color: rgba(126, 0, 210, 0.7); }
+  section p {
+    color: #4d4d4d;
+    font-size: 3vw; }
+  @media screen and (min-width: 1025px) {
+    section h2 {
+      margin-top: 0;
+      font-size: 5vw; }
+    section p {
+      font-size: 2vw; } }
+#introduction ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 3vw;
+  color: #4d4d4d; }
+
+@media screen and (min-width: 1025px) {
+  #introduction ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 2vw;
+    gap: 10px; } }

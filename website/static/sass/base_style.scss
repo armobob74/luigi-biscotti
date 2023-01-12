@@ -1,0 +1,113 @@
+@import "screen_sizes.scss";
+$body-bg-color: hsl(213, 36%, 100);
+$text-color: black;
+$nav-bg-color-desktop: rgb(65, 0, 108);
+$nav-bg-color-mobile: rgb(255,255,255);
+$nav-link-color: white;
+$active-color: hsl(205, 95%, 78%);
+
+body {
+	background-color: $body-bg-color;
+	//background:linear-gradient($nav-bg-color,darken($body-bg-color,40%));
+	margin: 0px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+	background-color:$body-bg-color;
+}
+nav {
+	display: flex;
+	a {
+		text-decoration: none;
+	}
+	li {
+		list-style: none;
+	}
+
+	button {
+		margin-right: 4vw;
+		width: 8vw;
+		border:none;
+		background:none;
+	}
+}
+nav.navbar-mobile{
+	height:100vh;
+	width:100vw;
+	background-color: $nav-bg-color-mobile;
+	padding:0px;
+	margin:0px;
+	position:fixed;
+	top:0;
+	right:-100vw;
+	transition:0.3s;
+	display: flex;
+	justify-content: center;
+	button.navbar-closer {
+		position:absolute;
+		right:0px;
+		color:$nav-bg-color-desktop;
+		i {
+			font-size: 10vw;
+		}
+	}
+	ul{
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-evenly;
+		.active {
+			color: $active-color;
+		}
+		li{
+			a{
+				font-size:10vw;	
+			}
+		}
+	}
+}
+nav.navbar-desktop {
+	background-color: $nav-bg-color-desktop;
+	justify-content: space-between;
+	flex-direction: row;
+	.navbar-brand, a {
+		color: white;
+	}
+	.navbar-collapse {
+		flex-grow: 1;
+		.navbar-nav {
+			//justify-content: space-evenly;
+			text-align: center;
+			display:flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			.nav-link {
+				margin: 3vw;
+				color: $nav-link-color;
+				transition: 0.2s;
+			}
+			.nav-link:focus {
+				color: $active-color;
+			}
+			.nav-link:hover {
+				color: $active-color;
+			}
+			.active {
+				color: $active-color;
+			}
+		}
+		@media screen and (max-width: $desktop-min-width) {
+			display: none;
+		}
+	}
+	button.navbar-toggler {
+		color:white;
+		font-size: 10vw;
+		@media screen and (min-width: $desktop-min-width) {
+			display: none;
+		}
+	}
+}
+
+
+footer{
+	text-align:center;
+}

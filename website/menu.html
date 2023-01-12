@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/c95b87fc8f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Luigi Biscotti Web Design</title>
+  
+<link
+  href="/static/css/menu_style.css"
+  rel="stylesheet"
+/>
+    
+</head>
+<body>
+
+
+<nav class="navbar-mobile" id="navbar-mobile">
+  <button
+    class="navbar-closer"
+    id="navbar-closer"
+    type="button"
+    aria-controls="navbar-mobile"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    onclick="collapseNavigation()"
+  ><i class="fa-solid fa-xmark"></i></button>
+  
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/services"
+          >Services</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/portfolio"
+          >Portfolio</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/about"
+          >About</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contact"
+          >Contact</a
+        >
+      </li>
+    </ul>
+
+</nav>
+<nav class="navbar-desktop">
+  <ul class="navbar-brand">
+    <li class="navbar-brand">
+      <a class="navbar-brand" href="/">[Luigi Biscotti]</a>
+    </li>
+  </ul>
+  <div class="navbar-collapse" id="navbarSupportedContent">
+	  
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/services"
+          >Services</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/portfolio"
+          >Portfolio</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/about"
+          >About</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contact"
+          >Contact</a
+        >
+      </li>
+    </ul>
+
+  </div>
+  <button
+    class="navbar-toggler"
+    id="navbar-toggler"
+    type="button"
+    aria-controls="navbar-mobile"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    onclick="toggleNavigation()"
+  ><i class="fa-solid fa-bars"></i></button>
+  <script>
+    let navbarToggler = document.getElementById("navbar-toggler");
+    let navMobileWindow = document.getElementById("navbar-mobile");
+    function expandNavigation() {
+      //navMobileWindow.style.display = "block";
+      navMobileWindow.style.right = "0";
+      navbarToggler.setAttribute("aria-expanded", "true");
+    }
+    function collapseNavigation() {
+      navMobileWindow.style.right = "-100vw";
+      navbarToggler.setAttribute("aria-expanded", "false");
+    }
+    function toggleNavigation() {
+      ariaExpanded = navbarToggler.getAttribute("aria-expanded");
+      if (ariaExpanded == "true") {
+        collapseNavigation();
+      } else {
+        expandNavigation();
+      }
+    }
+  </script>
+</nav>
+
+
+</body>
+</html>

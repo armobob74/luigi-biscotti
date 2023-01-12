@@ -1,0 +1,93 @@
+@import "base_style.scss";
+$tagbox-text-color: white;
+$tagbox-start-color: transparentize($nav-bg-color-desktop,0.3);
+$tagbox-mid-color:hsla(198, 100%, 44%, 0.64);
+$tagbox-end-color:$tagbox-mid-color;
+
+$section-text-color:hsl(100,0%,30%);
+$highlight-color:lighten($tagbox-start-color,20);
+
+#tagbox{
+	margin-top:0;
+	padding-top:0;
+	padding-left:4vw;
+	padding-right:4vw;
+	display:flex;
+	flex-direction:column;
+	background:linear-gradient(to bottom, $tagbox-start-color, $tagbox-end-color); //fallback bg if no image
+	background-size:cover; //stretch image without deforamtion
+	background-image:linear-gradient($tagbox-start-color,$tagbox-end-color),url("/static/images/rohit-tandon-mountain-pic-mobile.jpg");
+
+	color:$tagbox-text-color;
+	height:80vh;
+	h1{
+		font-size:10vw;
+	}
+	h2{
+		//overwrite the text-align for normal section h2
+		font-size:3vw;
+		text-align:left; 
+		color:$tagbox-text-color;
+	}
+	@media screen and (min-width: $desktop-min-width) {
+	background-image:linear-gradient($tagbox-start-color,$tagbox-end-color),url("/static/images/rohit-tandon-mountain-pic-desktop.jpg");
+		h1{
+			font-size:8vw;
+		}
+		h2{
+			font-size:3vw;
+		}
+	}
+}
+
+section {
+	display: flex;
+	flex-direction:column;
+	padding:2vw;
+	h2 {
+		font-size:6vw;
+		text-align:center;
+		color:black;
+	}
+	.highlight{
+		color:$highlight-color;
+	}
+	p{
+	color:$section-text-color;
+	font-size:3vw;
+	}
+
+	@media screen and (min-width: $desktop-min-width) {
+	//desktop style
+		h2{
+			margin-top:0;
+			font-size:5vw;
+		}
+		p{
+			font-size:2vw;
+		}
+	}
+}
+
+#introduction{
+	ul{
+		list-style: none;
+		display:flex;
+		flex-direction: column;
+		gap:10px;
+		font-size:3vw;
+		color:$section-text-color
+	}
+	// desktop-mode stuff
+	@media screen and (min-width: $desktop-min-width) {
+		ul{
+		list-style: none;
+		display:flex;
+		flex-direction: row;
+		justify-content: space-around;
+		//border: solid 1px red;
+		font-size:2vw;
+		gap:10px;
+	}
+	}
+}
