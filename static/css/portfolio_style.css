@@ -45,9 +45,14 @@ nav.navbar-mobile {
       font-size: 10vw; }
 
 nav.navbar-desktop {
+  height: 10vh;
+  align-items: center;
   background-color: #41006c;
   justify-content: space-between;
   flex-direction: row; }
+  @media screen and (min-width: 1025px) {
+    nav.navbar-desktop {
+      height: 8vh; } }
   nav.navbar-desktop .navbar-brand, nav.navbar-desktop a {
     color: white; }
   nav.navbar-desktop .navbar-collapse {
